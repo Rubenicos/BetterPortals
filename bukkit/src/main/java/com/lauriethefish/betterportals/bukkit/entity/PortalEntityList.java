@@ -7,11 +7,11 @@ import com.lauriethefish.betterportals.bukkit.portal.IPortal;
 import com.lauriethefish.betterportals.api.PortalPosition;
 import com.lauriethefish.betterportals.bukkit.util.performance.IPerformanceWatcher;
 import com.lauriethefish.betterportals.bukkit.util.performance.OperationTimer;
+import jakarta.inject.Inject;
 import lombok.Getter;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 
-import javax.inject.Inject;
 import java.util.Collection;
 
 // Stores the two lists of entities at the origin and destination of a portal

@@ -12,7 +12,6 @@ import com.lauriethefish.betterportals.shared.logging.Logger;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,11 +54,7 @@ public class MultiBlockChangeManager_Old implements IMultiBlockChangeManager   {
             }
 
             packet.getMultiBlockChangeInfoArrays().write(0, records);
-            try {
-                ProtocolLibrary.getProtocolManager().sendServerPacket(player, packet);
-            }   catch(InvocationTargetException ex) {
-                throw new RuntimeException("Error occurred while sending packet", ex);
-            }
+            ProtocolLibrary.getProtocolManager().sendServerPacket(player, packet);
         }
     }
 }

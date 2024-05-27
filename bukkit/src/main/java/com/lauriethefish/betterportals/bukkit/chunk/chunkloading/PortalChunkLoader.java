@@ -3,12 +3,11 @@ package com.lauriethefish.betterportals.bukkit.chunk.chunkloading;
 import com.lauriethefish.betterportals.bukkit.chunk.chunkpos.SquareChunkAreaIterator;
 import com.lauriethefish.betterportals.bukkit.config.RenderConfig;
 import com.lauriethefish.betterportals.api.PortalPosition;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 import org.bukkit.Location;
 import org.bukkit.util.Vector;
 import org.jetbrains.annotations.NotNull;
-
-import javax.inject.Inject;
-import javax.inject.Singleton;
 
 /**
  * Used to load the destination chunks of a portal, this is done to make entities move

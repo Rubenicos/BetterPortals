@@ -26,7 +26,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -366,12 +365,8 @@ public class EntityPacketManipulator implements IEntityPacketManipulator {
 
     private void sendPacket(PacketContainer packet, Collection<Player> players) {
         ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
-        try {
-            for (Player player : players) {
-                protocolManager.sendServerPacket(player, packet);
-            }
-        }   catch(InvocationTargetException ex) {
-            throw new RuntimeException("Failed to send packet", ex);
+        for (Player player : players) {
+            protocolManager.sendServerPacket(player, packet);
         }
     }
 }

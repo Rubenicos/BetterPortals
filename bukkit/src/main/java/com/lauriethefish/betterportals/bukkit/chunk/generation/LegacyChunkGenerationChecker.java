@@ -1,9 +1,8 @@
 package com.lauriethefish.betterportals.bukkit.chunk.generation;
 
+import jakarta.inject.Singleton;
 import org.bukkit.World;
 import org.jetbrains.annotations.NotNull;
-
-import javax.inject.Singleton;
 
 @Singleton
 public class LegacyChunkGenerationChecker implements IChunkGenerationChecker    {

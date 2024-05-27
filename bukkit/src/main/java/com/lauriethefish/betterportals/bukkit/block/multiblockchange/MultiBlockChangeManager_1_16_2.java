@@ -10,7 +10,6 @@ import com.google.inject.assistedinject.Assisted;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -67,11 +66,7 @@ public class MultiBlockChangeManager_1_16_2 implements IMultiBlockChangeManager 
             packet.getBlockDataArrays().writeSafely(0, data);
             packet.getShortArrays().writeSafely(0, positions);
 
-            try {
-                ProtocolLibrary.getProtocolManager().sendServerPacket(player, packet);
-            }   catch(InvocationTargetException ex) {
-                ex.printStackTrace();
-            }
+            ProtocolLibrary.getProtocolManager().sendServerPacket(player, packet);
         }
     }
 }
